@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  overflow: hidden;
+  background-color: black;
+  position: relative;
+}
+
+canvas {
+  border: 5px solid #333;
+}
+
+#control_buttons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  width: fit-content;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  overflow: auto;
+}
+
+@media (max-width: 800px) {
+  #control_buttons {
+    top: 100%;
+    right: auto;
+    height: 50%;
+    flex-direction: row;
+    overflow: auto;
+  }
+}
+
+#add_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  background-color: #333;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  border: 3px solid #333;
+  background: none;
+  border-radius: 10px;
+  transition: 0.3s all;
+}
+
+button:hover {
+  transform: scale(110%);
+  background: #111;
+}
+
+button:active {
+  transform: scale(95%);
+}
+
+.select,
+option,
+input {
+  color: #000;
+}
+
+#groups {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.group {
+  width: 90%;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.group > label {
+  filter: invert(100);
+}
+
+#bond_select {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 5px;
+  margin: 20px 0;
+}
+
+.select {
+  width: 40%;
+}
+
+#rules {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10px;
+}
