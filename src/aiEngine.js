@@ -1,3 +1,5 @@
+import { isPause } from "./addPanel";
+
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 ctx.imageSmoothingEnabled = false;
@@ -66,9 +68,11 @@ export const rule = (particles1, particles2, g) => {
 };
 
 export const update = () => {
-  rules.forEach((ruleEl) =>
-    rule(ruleEl.from.particles, ruleEl.to.particles, ruleEl.g)
-  );
+  if (!isPause) {
+    rules.forEach((ruleEl) =>
+      rule(ruleEl.from.particles, ruleEl.to.particles, ruleEl.g)
+    );
+  }
   ctx.clearRect(0, 0, canvas.width, canvas.width);
   draw(0, 0, 'black', canvas.width);
   particles.forEach((particle) =>

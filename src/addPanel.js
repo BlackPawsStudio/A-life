@@ -1,10 +1,13 @@
 import { addRule, createParticlesGroup, rules } from './aiEngine';
 
+export let isPause = false;
+
 const colorInput = document.getElementById('color_input');
 const numberInput = document.getElementById('number_input');
 const addBtn = document.getElementById('add');
 const groupsCont = document.getElementById('groups');
 const rulesCont = document.getElementById('rules');
+const pauseBtn = document.getElementById('pause');
 
 let color = '';
 let number = 0;
@@ -74,26 +77,7 @@ addBtn.addEventListener('click', () => {
   }
 });
 
-// gInput.addEventListener('input', (e) => {
-//   g = e.target.value;
-//   gDisplay.innerHTML = g;
-// });
-
-// const changeSelects = () => {
-//   selectFrom.innerHTML = '';
-//   selectTo.innerHTML = '';
-//   groups.forEach((el, id) => {
-//     selectFrom.innerHTML += `
-//     <option value="${id}">${el.name}</option>`;
-//     selectTo.innerHTML += `
-//     <option value="${id}">${el.name}</option>`;
-//   });
-// };
-
-// ruleBtn.addEventListener('click', () => {
-//   const from = groups[selectFrom.value];
-//   const to = groups[selectTo.value];
-//   addRule(from, to, g);
-//   rulesCont.innerHTML = '';
-//
-// });
+pauseBtn.addEventListener('click', () => {
+  isPause = !isPause
+  pauseBtn.innerHTML = isPause ? 'Continue' : 'Pause'
+})
