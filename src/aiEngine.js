@@ -30,7 +30,7 @@ export const addRule = (from, to, g) => {
 };
 
 const random = () => {
-  return Math.random() * 500;
+  return Math.random() * (canvas.width - 30 - 10) + 10;
 };
 
 export const createParticlesGroup = (number, color, size, name) => {
