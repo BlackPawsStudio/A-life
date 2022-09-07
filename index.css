@@ -4,6 +4,7 @@
   box-sizing: border-box;
   color: #fff;
 }
+
 html {
   height: 100%;
   width: 100%;
@@ -65,6 +66,7 @@ button {
   background: none;
   border-radius: 10px;
   transition: 0.3s all;
+  margin: 5px 0;
 }
 
 button:hover {
@@ -115,4 +117,16 @@ input {
   align-items: center;
   flex-direction: column;
   row-gap: 10px;
+}
+
+.rules_object {
+  width: 10px;
+  height: 10px;
+}
+
+.rules_info {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
